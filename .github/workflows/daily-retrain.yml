@@ -2,8 +2,8 @@ name: Daily Model Fine-tuning
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 17 * * *'  # tiap hari jam 17:00 UTC / 00:00 WIB 
+  # schedule:
+    # - cron: '0 17 * * *'  # tiap hari jam 17:00 UTC / 00:00 WIB 
 
 jobs:
   retrain-and-update:
@@ -57,4 +57,4 @@ jobs:
 
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} AI-10
 
-          git push https://x-access-token:${PAT_TOKEN}@github.com/Fardan-Nurhidayat/fincoach.git AI-10:AI-10
+        # git push https://x-access-token:${PAT_TOKEN}@github.com/Fardan-Nurhidayat/fincoach.git AI-10:AI-10
